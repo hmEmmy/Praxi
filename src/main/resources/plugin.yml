@@ -1,6 +1,5 @@
-main: com.minexd.praxi.Praxi
-name: Praxi
+main: me.emmy.practice.Practice
+name: Practice
 version: ${project.version}
-author: joeleoli
+authors: ["Emmy", "joeleoli"]
 description: ${project.description}
-depend: [Zoot]

@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.minexd</groupId>
-    <artifactId>praxi</artifactId>
+    <groupId>me.emmy</groupId>
+    <artifactId>Practice</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <repositories>
@@ -23,74 +23,53 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.16.16</version>
-            <scope>provided</scope>
-        </dependency>
-		<dependency>
-            <groupId>net.frozenorb.mspigot</groupId>
-            <artifactId>mspigot-api</artifactId>
-            <version>1.7.10-R0.1-SNAPSHOT</version>
+            <version>1.18.28</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>net.frozenorb.mspigot</groupId>
-            <artifactId>mspigot</artifactId>
-            <version>1.7.10-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.minexd</groupId>
-            <artifactId>zoot</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.minexd</groupId>
-            <artifactId>bukkit-countdown</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>3.12.11</version>
             <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.bizarrealex.aether</groupId>
-            <artifactId>Aether</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.sk89q.worldedit</groupId>
-            <artifactId>worldedit-bukkit</artifactId>
-            <version>6.1.5</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.sk89q.worldedit</groupId>
             <artifactId>worldedit-core</artifactId>
             <version>6.0.0-SNAPSHOT</version>
-            <scope>provided</scope>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/WorldEdit.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.github.paperspigot</groupId>
+            <artifactId>paperspigot-api</artifactId>
+            <version>1.8.8-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/PaperSpigot-1.8.8-R0.1-SNAPSHOT.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.boydti</groupId>
             <artifactId>fawe-api</artifactId>
             <version>latest</version>
-            <scope>provided</scope>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/fawe-api-latest.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.comphenix.protocol</groupId>
-            <artifactId>ProtocolLib-v1_7_R4</artifactId>
-            <version>3.7.0-BETA</version>
-            <scope>provided</scope>
+            <artifactId>ProtocolLib-API</artifactId>
+            <version>4.4.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/ProtocolLib.jar</systemPath>
         </dependency>
         <dependency>
-            <groupId>com.minexd</groupId>
-            <artifactId>spectre</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>provided</scope>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.10.2</version>
         </dependency>
     </dependencies>
 
     <build>
+        <finalName>${project.name}-${project.version}</finalName>
         <defaultGoal>clean install</defaultGoal>
-
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
